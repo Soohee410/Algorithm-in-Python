@@ -1,4 +1,4 @@
-# Python-Coding-Test
+# Algorithm in Python
 
 My solutions for Algorithm problems in Python.
 
