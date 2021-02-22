@@ -1,6 +1,7 @@
 #모든 음식이 0이 아닌 상황에서, 0이 아닌 음식 만날 때까지 이동.
 #모든 음식이 0이면 반복문 중단.
 
+#오답
 def solution(food_times, k):
     answer = 0
     length = len(food_times)
