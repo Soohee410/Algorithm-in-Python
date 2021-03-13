@@ -1,6 +1,6 @@
 from sys import stdin, stdout
 
-N,M = map(int, stdin.readline().split())
+N, M = map(int, stdin.readline().split())
 
 data = dict()
 for _ in range(N):
