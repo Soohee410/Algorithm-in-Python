@@ -1,4 +1,6 @@
 # 첫번째 답: 35664KB / 220ms
+from sys import stdin
+
 def StackSequence(data):
   stk, result, maximum = [], [], data[0]
   for i in range(1,maximum+1):
@@ -24,8 +26,6 @@ def StackSequence(data):
   return '\n'.join(result)
 
 
-from sys import stdin
-
 n = int(stdin.readline())
 data = [int(stdin.readline()) for _ in range(n)]
 print(StackSequence(data))
@@ -33,6 +33,8 @@ print(StackSequence(data))
 
 # -------------------------------------------------------------------------
 # 발전된 답
+from sys import stdin
+
 def StackSequence(data):
   stk, result, num = [], [], 1    # num은 포인터? 커서? 라고 생각하자
 
@@ -50,7 +52,6 @@ def StackSequence(data):
   return '\n'.join(result)
 
 
-from sys import stdin
 n = int(stdin.readline())
 data = [int(stdin.readline()) for _ in range(n)]
 
