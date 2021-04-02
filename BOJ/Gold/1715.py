@@ -1,6 +1,7 @@
 #우선순위 큐를 이용하는 것이 효과적
 import sys
 import heapq
+
 N = int(sys.stdin.readline())
 
 heap = []
