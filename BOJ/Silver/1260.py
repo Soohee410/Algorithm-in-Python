@@ -6,12 +6,12 @@ N,M,V = map(int, sys.stdin.readline().split())
 graph = [[] for _ in range(N+1)]
 
 for _ in range(M):
-  x,y = map(int, sys.stdin.readline().split())
-  graph[x].append(y)
-  graph[y].append(x)
+    x,y = map(int, sys.stdin.readline().split())
+    graph[x].append(y)
+    graph[y].append(x)
 
 for i in range(N+1):
-  graph[i].sort()
+    graph[i].sort()
 
 def dfs(graph, v, visited):
     visited[v] = True
