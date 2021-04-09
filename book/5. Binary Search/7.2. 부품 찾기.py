@@ -2,15 +2,15 @@
 from sys import stdin
 
 def binary_search(array,target,start,end):
-  if start > end:
-    return False
-  mid = (start+end)//2
-  if array[mid] == target:
-    return mid
-  elif array[mid] > target:
-    return binary_search(array,target,start,mid-1)
-  else:
-    return binary_search(array,target,mid+1,end)
+    if start > end:
+        return False
+    mid = (start+end)//2
+    if array[mid] == target:
+        return mid
+    elif array[mid] > target:
+        return binary_search(array,target,start,mid-1)
+    else:
+        return binary_search(array,target,mid+1,end)
 
 N = int(stdin.readline())
 store = list(map(int, stdin.readline().split()))
@@ -19,8 +19,8 @@ ctmr = list(map(int, stdin.readline().split()))
 
 
 for i in ctmr:
-  if binary_search(store,i,0,N-1) : print('yes', end=' ')
-  else: print('no', end=' ')
+    if binary_search(store,i,0,N-1) : print('yes', end=' ')
+    else: print('no', end=' ')
 
 
 # -------------------------------------------------------------------
@@ -36,8 +36,8 @@ M = int(stdin.readline())
 ctmr = list(map(int, stdin.readline().split()))
 
 for j in ctmr:
-  if store[j] == 1: print('yes', end=' ')
-  else: print('no', end=' ')
+    if store[j] == 1: print('yes', end=' ')
+    else: print('no', end=' ')
 
 
 
@@ -52,5 +52,5 @@ M = int(stdin.readline())
 ctmr = list(map(int, stdin.readline().split()))
 
 for j in ctmr:
-  if j in store: print('yes', end=' ')
-  else: print('no', end=' ')
+    if j in store: print('yes', end=' ')
+    else: print('no', end=' ')
