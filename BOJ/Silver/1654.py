@@ -1,3 +1,5 @@
+from sys import stdin
+
 def BS_line(data,N):
     start, end = 1, max(data)
     result = 0
@@ -15,8 +17,6 @@ def BS_line(data,N):
 
     return result
 
-
-from sys import stdin
 
 K,N = map(int, stdin.readline().split())
 data = [int(stdin.readline()) for _ in range(K)]
