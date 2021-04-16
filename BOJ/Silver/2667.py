@@ -21,8 +21,8 @@ def SolbyBFS():
 
         que2 = deque([(startx,starty)])
         G[startx][starty] = '0'
-        cnt1 += 1  #단지 수 1 증가.
-        cnt2 = 1   #단지 내 집 수 1로 초기화.
+        cnt1 += 1    #단지 수 1 증가.
+        cnt2 = 1     #단지 내 집 수 1로 초기화.
 
         while que2:   #단지 내 집 수 찾는 과정.
             x, y = que2.popleft()
