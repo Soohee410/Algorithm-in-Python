@@ -1,4 +1,3 @@
-#연결된 전체 간선 중 가장 비용 큰 간선 하나 빼기.
 import sys
 input = sys.stdin.readline
 
@@ -14,23 +13,22 @@ def union(parent, a, b):
     else: parent[a] = b
 
 def Solution():
-    n, m = map(int, input().split())
+    v, e = map(int, input().split())
+    parent = list(range(v+1))  #부모 테이블
     edges = []
-    for _ in range(m):
-        a, b, c = map(int, input().split())
-        edges.append((c,a,b))
+    for _ in range(e):
+        a, b, cost = map(int, input().split())
+        edges.append((cost, a, b))
+
     edges.sort()
 
-    result, max_c = 0, 0
-    parent = list(range(v+1))
-
+    result = 0
     for edge in edges:
         cost, a, b = edge
         if find_parent(parent, a) != find_parent(parent, b):
             union(parent, a, b)
             result += cost
-            max_c = cost
 
-    print(result-max_c)
+    print(result)
 
 Solution()

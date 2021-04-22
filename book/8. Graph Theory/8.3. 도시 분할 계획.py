@@ -22,7 +22,9 @@ def Solution():
     edges.sort()
 
     result, max_c = 0, 0
-    parent = list(range(v+1))
+    parent = [0] * (n+1)
+    for i in range(1, n+1):
+        parent[i] = i
 
     for edge in edges:
         cost, a, b = edge
