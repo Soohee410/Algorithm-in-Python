@@ -1,6 +1,7 @@
 #그냥 input쓰면 시간초과됨
-
+from collections import Counter #mode
 import sys
+
 N = int(input())
 data = [int(sys.stdin.readline()) for _ in range(N)]
 print("%.0f" %(sum(data)/N)) #mean
@@ -8,7 +9,6 @@ print("%.0f" %(sum(data)/N)) #mean
 data.sort()
 print(data[N//2]) #mid
 
-from collections import Counter #mode
 A = Counter(data)
 B = A.most_common(); maximum = B[0][1]
 mode_list = [x for x,y in B if y==maximum]
